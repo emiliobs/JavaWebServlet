@@ -17,4 +17,9 @@ public class Controladora
   {
       return controladoraPersistencia.TraerUsuarios();
   }
+
+    public void BorrarUsuario(int IdEliminar)
+    {
+        controladoraPersistencia.BorrarUsuario(IdEliminar);
+    }
 }
