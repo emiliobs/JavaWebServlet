@@ -1,5 +1,6 @@
 package com.mycompany.servlet10;
 
+import com.mycompany.servlet10.Logica.Controladora;
 import com.mycompany.servlet10.Logica.Usuarios;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,6 +20,8 @@ import javax.servlet.http.HttpSession;
 })
 public class SvUsuarios extends HttpServlet
 {
+   Controladora controladora = new Controladora();
+    
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
@@ -30,12 +33,16 @@ public class SvUsuarios extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        List<Usuarios> listUsuarios = new ArrayList<>();
+        //List<Usuarios> listUsuarios = new ArrayList<>();
 //        listUsuarios.add(new Usuarios("11111", "Canelo", "Sexto", "1234111"));
 //        listUsuarios.add(new Usuarios("22222", "Lina", "Linda", "09875"));
 //        listUsuarios.add(new Usuarios("33333", "Gabriela", "Minovia", "39456"));
 //        listUsuarios.add(new Usuarios("44444", "Oscar", "Renta", "95463"));
 //        listUsuarios.add(new Usuarios("55555", "Emilio", "Barrera", "12345"));
+        
+        List<Usuarios> listUsuarios = new ArrayList<>();
+        listUsuarios =  controladora.TraerUsuarios();
+
   
         HttpSession miSession  = request.getSession();
         miSession.setAttribute("listaUsuarios", listUsuarios);
@@ -54,7 +61,15 @@ public class SvUsuarios extends HttpServlet
         String apellido = request.getParameter("txtApellido");
         String telefono = request.getParameter("txtTelefono");
 
-        System.out.println("Dni: " + dni + " Nombre: " + nombre + " Apellido: " + apellido + " Teléfono" + telefono);
+        Usuarios usuarios = new Usuarios();
+        usuarios.setDni(dni);
+        usuarios.setNombre(nombre);
+        usuarios.setApellido(apellido);
+        usuarios.setTelefono(telefono);
+        
+        controladora.CrearUsuario(usuarios);
+        
+        //System.out.println("Dni: " + dni + " Nombre: " + nombre + " Apellido: " + apellido + " Teléfono" + telefono);
     }
 
     @Override
