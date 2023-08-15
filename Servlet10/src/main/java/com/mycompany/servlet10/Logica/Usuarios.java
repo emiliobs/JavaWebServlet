@@ -2,23 +2,45 @@
 package com.mycompany.servlet10.Logica;
 
 
-public class Usuarios
+
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Usuarios implements Serializable
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)     
+    private int id;
     private String dni;
     private String nombre;
     private String apellido;
     private String telefono;
 
-    public Usuarios(String dni, String nombre, String apellido, String telefono)
+    public Usuarios()
     {
+    }
+
+    public Usuarios(int Id, String dni, String nombre, String apellido, String telefono)
+    {
+        this.id = Id;
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
     }
 
-    public Usuarios()
+    public int getId()
     {
+        return id;
+    }
+
+    public void setId(int Id)
+    {
+        this.id = Id;
     }
 
     public String getDni()
@@ -60,6 +82,13 @@ public class Usuarios
     {
         this.telefono = telefono;
     }
+    
+    
+       
+   
+
+
+   
     
     
 }
