@@ -25,5 +25,14 @@
 
         </form>
         
+        <h1>Eliminar Usuarios</h1>
+         <hr/>
+        <p>Ingrese el ID del Usuario a Eliminar!</p>
+        <form action="SvEliminar" method="post">
+            <p><label>ID: </label><input type="text" name="txtIdUsuario"/></p>
+            <button type="submit">Eliminar Usuario</button>      
+
+        </form>
+        
     </body>
 </html>
