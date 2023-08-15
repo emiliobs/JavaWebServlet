@@ -21,6 +21,7 @@
 
         %>        
         <p><b>Usuarios Número: <%= contador%></b></p>
+        <p>Id      : <%= usuarios.getId()%></p>
         <p>Dni     : <%= usuarios.getDni()%></p>
         <p>Nombre  : <%= usuarios.getNombre()%></p>
         <p>Apellido: <%= usuarios.getApellido()%></p>
