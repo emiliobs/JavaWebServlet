@@ -69,6 +69,8 @@ public class SvUsuarios extends HttpServlet
         
         controladora.CrearUsuario(usuarios);
         
+        response.sendRedirect("index.jsp");
+        
         //System.out.println("Dni: " + dni + " Nombre: " + nombre + " Apellido: " + apellido + " Teléfono" + telefono);
     }
 
