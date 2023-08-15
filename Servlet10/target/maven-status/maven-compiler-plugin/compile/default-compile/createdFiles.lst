@@ -1,4 +1,10 @@
-com\mycompany\servlet10\JAXRSConfiguration.class
 com\mycompany\servlet10\Logica\Usuarios.class
-com\mycompany\servlet10\resources\JavaEE8Resource.class
+com\mycompany\servlet10\Persistencia\UsuariosJpaController.class
+com\mycompany\servlet10\Persistencia\exceptions\PreexistingEntityException.class
 com\mycompany\servlet10\SvUsuarios.class
+com\mycompany\servlet10\JAXRSConfiguration.class
+com\mycompany\servlet10\Persistencia\exceptions\IllegalOrphanException.class
+com\mycompany\servlet10\resources\JavaEE8Resource.class
+com\mycompany\servlet10\Persistencia\exceptions\NonexistentEntityException.class
+com\mycompany\servlet10\resources\UsuariosJpaController.class
+com\mycompany\servlet10\Logica\Usuarios_.class

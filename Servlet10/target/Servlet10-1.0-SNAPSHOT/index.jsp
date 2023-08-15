@@ -21,8 +21,7 @@
          <hr/>
         <p>Para ver los datos de los Usuarios cargado haga click en el Botón</p>
         <form action="SvUsuarios" method="get">
-            <button type="submit">Mostrar Usuarios</button>
-            <button type="submit">Mostrar Usuarios</button>
+            <button type="submit">Mostrar Usuarios</button>      
 
         </form>
         
