@@ -9,4 +9,6 @@ com\mycompany\servlet10\Logica\Usuarios.class
 com\mycompany\servlet10\Persistencia\UsuariosJpaController.class
 com\mycompany\servlet10\Logica\Controladora.class
 com\mycompany\servlet10\JAXRSConfiguration.class
+com\mycompany\servlet10\SvEliminar.class
+com\mycompany\servlet10\SvEditar.class
 com\mycompany\servlet10\Persistencia\ControladoraPersistencia.class
